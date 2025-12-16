@@ -34,8 +34,8 @@ Getting started typically looks like this:
    Create a file called init.apm.ts:
  
     ```js
-    //init.apm.ts
-    import * as apm from 'mtn-apm-agent';
+    // init.apm.ts
+    const apm = require('mtn-apm-agent');
     
     apm.start({
       serviceName: 'your-service-name',
@@ -44,7 +44,8 @@ Getting started typically looks like this:
       captureBody: 'all',
       opentelemetryBridgeEnabled: true,
     });
-    export default apm;
+    
+    export = apm;
     ```
     
 3: Import it FIRST in your application entry point
