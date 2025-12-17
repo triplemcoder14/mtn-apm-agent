@@ -2,7 +2,7 @@ MTN APM Node.js Agent
  
 This is the MTN-official Node.js application performance monitoring (APM)
 agent. It keeps the battle-tested auto-instrumentation logic from the upstream
-Elastic APM agent but packages it for MTN engineers as a simple drop-in SDK.
+Otel APM agent but packages it for MTN engineers as a simple drop-in SDK.
 Install the package, provide your MTN observability endpoint, and your Node.js
 application is automatically instrumented without manual code changes.
  
