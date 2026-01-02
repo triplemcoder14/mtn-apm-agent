@@ -45,7 +45,6 @@ Getting started typically looks like this:
 
 ```js
 // main.ts
-import './init';
 //import { NestFactory } from '@nestjs/core';
 ```
     
