@@ -1,0 +1,88 @@
+{
+  "name": "mtn-apm-agent",
+  "version": "1.0.2",
+  "description": "The official MTN APM agent for Node.js",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "node -e \"require('.')\"",
+    "test": "echo \"No tests defined for public release\"",
+    "bench": "echo \"No benchmarks defined for public release\"",
+    "prepublishOnly": "echo \"Skipping tests for first public release\""
+  },
+  "files": [
+    "NOTICE.md",
+    "lib",
+    "types",
+    "start.js",
+    "loader.mjs",
+    "index.d.ts",
+    "start.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/triplemcoder14/mtn-apm-agent.git"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "keywords": [
+    "mtn",
+    "observability",
+    "monitoring",
+    "apm",
+    "performance",
+    "tracing",
+    "nodejs",
+    "distributed-tracing"
+  ],
+  "author": "Muutassim-Mukhtar",
+  "bugs": {
+    "url": "https://github.com/triplemcoder14/mtn-apm-agent/issues"
+  },
+  "homepage": "https://github.com/triplemcoder14/mtn-apm-agent",
+  "dependencies": {
+    "@elastic/ecs-pino-format": "^1.5.0",
+    "@opentelemetry/api": "^1.4.1",
+    "@opentelemetry/core": "^1.11.0",
+    "@opentelemetry/sdk-metrics": "^1.12.0",
+    "after-all-results": "^2.0.0",
+    "agentkeepalive": "^4.2.1",
+    "async-value-promise": "^1.1.1",
+    "basic-auth": "^2.0.1",
+    "breadth-filter": "^2.0.0",
+    "cookie": "^0.7.1",
+    "core-util-is": "^1.0.2",
+    "end-of-stream": "^1.4.4",
+    "error-callsites": "^2.0.4",
+    "error-stack-parser": "^2.0.6",
+    "escape-string-regexp": "^4.0.0",
+    "express": "^4.22.1",
+    "fast-safe-stringify": "^2.0.7",
+    "fast-stream-to-buffer": "^1.0.0",
+    "http-headers": "^3.0.2",
+    "import-in-the-middle": "1.15.0",
+    "json-bigint": "^1.0.0",
+    "lru-cache": "10.2.0",
+    "measured-reporting": "^1.51.1",
+    "module-details-from-path": "^1.0.3",
+    "monitor-event-loop-delay": "^1.0.0",
+    "object-filter-sequence": "^1.0.0",
+    "object-identity-map": "^1.0.2",
+    "original-url": "^1.2.3",
+    "pino": "^8.15.0",
+    "readable-stream": "^3.6.2",
+    "relative-microtime": "^2.0.0",
+    "require-in-the-middle": "^8.0.0",
+    "semver": "^7.5.4",
+    "shallow-clone-shim": "^2.0.0",
+    "source-map": "^0.8.0-beta.0",
+    "sql-summary": "^1.0.1",
+    "stream-chopper": "^3.0.1",
+    "unicode-byte-truncate": "^1.0.0"
+  }
+}
