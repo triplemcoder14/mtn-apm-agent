@@ -1,6 +1,6 @@
 {
-  "name": "mtn-apm-agent",
-  "version": "1.0.2",
+  "name": "@mukhy/mtn-apm-agent",
+  "version": "1.0.3",
   "description": "The official MTN APM agent for Node.js",
   "type": "commonjs",
   "main": "index.js",
@@ -15,14 +15,28 @@
     "prepublishOnly": "echo \"Skipping tests for first public release\""
   },
   "files": [
-    "NOTICE.md",
     "lib",
     "types",
+    "mtn",
     "start.js",
     "loader.mjs",
     "index.d.ts",
     "start.d.ts"
   ],
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./start": {
+      "require": "./start.js",
+      "types": "./start.d.ts"
+    },
+    "./mtn": {
+      "require": "./mtn/index.js",
+      "types": "./mtn/index.d.ts"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/triplemcoder14/mtn-apm-agent.git"
