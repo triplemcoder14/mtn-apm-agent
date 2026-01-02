@@ -20,14 +20,14 @@ Getting started typically looks like this:
 1. Install the APM agent package as a dependency:
  
     ```
-    npm install --save mtn-apm-agent
+    npm install --save @mukhy/mtn-apm-agent
     ```
  
 2. Initialize the APM agent before any other imports
-   Create a file called init.apm.ts:
+   Create a file called init.ts:
  
     ```js
-    // init.ts/js
+    // init.ts
     const mtn = require('@mukhy/mtn-apm-agent');
     
     mtn.start({
