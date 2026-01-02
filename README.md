@@ -1,25 +1,18 @@
 MTN APM Node.js Agent
  
-This is the MTN-official Node.js application performance monitoring (APM)
-agent. It keeps the battle-tested auto-instrumentation logic from the upstream
-Otel APM agent but packages it for MTN engineers as a simple drop-in SDK.
-Install the package, provide your MTN observability endpoint, and your Node.js
-application is automatically instrumented without manual code changes.
+This is the MTN-official Node.js application performance monitoring (APM) agent.
+It builds on the battle-tested OpenTelemetry SDK and auto-instrumentation libraries, 
+packaging them as a simple drop-in SDK for MTN Nodejs Projects.
+After installing the package and configuring the observability endpoint, 
+Node.js applications are automatically instrumented with no manual instrumentation required.
  
 The agent captures errors, traces, and performance metrics and forwards them to
-your MTN Observability platform so you can monitor services, create alerts, and
+your Observability backend so you can monitor services, create alerts, and
 quickly identify root causes. MTN engineers can reach the internal SRE team for questions or feedback.
- 
- 
-## Installation
- 
-```
-npm install --save mtn-apm-agent
-```
  
 ## Getting started
  
-You will need an MTN Observability endpoint that accepts APM traffic. Obtain the
+You will need an Observability endpoint that accepts APM traffic. Obtain the
 APM **`serverUrl`** from the SRE team before starting.
  
 Getting started typically looks like this:
@@ -53,7 +46,7 @@ Getting started typically looks like this:
 ```js
 // main.ts
 import './init.apm';
-import { NestFactory } from '@nestjs/core';
+//import { NestFactory } from '@nestjs/core';
 ```
     
  
