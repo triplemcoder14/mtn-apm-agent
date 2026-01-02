@@ -330,12 +330,11 @@ declare namespace apm {
     trace(msg: string, ...args: any[]): void;
     trace(obj: {}, msg?: string, ...args: any[]): void;
     // Allow a passed in Logger that has other properties, as a Pino logger
-    // does. Discussion:
+
     [propName: string]: any;
   }
 
   // Link and `links` are intended to be compatible with OTel's
-  // equivalent APIs in "opentelemetry-js-api/src/trace/link.ts". Currently
   // span link attributes are not supported.
   export interface Link {
     /** A W3C trace-context 'traceparent' string, Transaction, Span, or OTel SpanContext. */
