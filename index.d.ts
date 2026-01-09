@@ -196,12 +196,12 @@ declare namespace apm {
 
 
   export interface AgentConfigOptions {
-    abortedErrorThreshold?: string; // Also support `number`, but as we're removing this functionality soon, there's no need to advertise it
+    abortedErrorThreshold?: string; 
     active?: boolean;
     addPatch?: KeyValueConfig;
     apiKey?: string;
-    apiRequestSize?: string; // Also support `number`, but as we're removing this functionality soon, there's no need to advertise it
-    apiRequestTime?: string; // Also support `number`, but as we're removing this functionality soon, there's no need to advertise it
+    apiRequestSize?: string; 
+    apiRequestTime?: string; 
     breakdownMetrics?: boolean;
     captureBody?: CaptureBody;
     captureErrorLogStackTraces?: CaptureErrorLogStackTraces;
@@ -241,18 +241,18 @@ declare namespace apm {
     kubernetesPodName?: string;
     kubernetesPodUID?: string;
     logLevel?: LogLevel;
-    logger?: Logger; // Notably this Logger interface matches the Pino Logger.
+    logger?: Logger; // this Logger interface matches the Pino Logger.
     longFieldMaxLength?: number;
     maxQueueSize?: number;
-    metricsInterval?: string; // Also support `number`, but as we're removing this functionality soon, there's no need to advertise it
+    metricsInterval?: string; 
     metricsLimit?: number;
     opentelemetryBridgeEnabled?: boolean;
     payloadLogFile?: string;
     sanitizeFieldNames?: Array<string>;
     secretToken?: string;
     serverCaCertFile?: string;
-    serverTimeout?: string; // Also support `number`, but as we're removing this functionality soon, there's no need to advertise it
-    serverUrl?: string;
+    serverTimeout?: string; 
+    endpoint?: string;
     serviceName?: string;
     serviceNodeName?: string;
     serviceVersion?: string;
@@ -290,11 +290,7 @@ declare namespace apm {
     message?: string;
     captureAttributes?: boolean;
     skipOutcome?: boolean;
-    /**
-     * A Transaction or Span instance to make the parent of this error. If not
-     * given (undefined), then the current span or transaction will be used. If
-     * `null` is given, then no span or transaction will be used.
-     */
+  
     parent?: Transaction | Span | null;
   }
 
@@ -314,9 +310,7 @@ declare namespace apm {
   }
 
   interface Logger {
-    // Defining overloaded methods rather than a separate `interface LogFn`
-    // as @types/pino does, because the IDE completion shows these as *methods*
-    // rather than as properties, which is slightly nicer.
+
     fatal(msg: string, ...args: any[]): void;
     fatal(obj: {}, msg?: string, ...args: any[]): void;
     error(msg: string, ...args: any[]): void;
@@ -329,22 +323,20 @@ declare namespace apm {
     debug(obj: {}, msg?: string, ...args: any[]): void;
     trace(msg: string, ...args: any[]): void;
     trace(obj: {}, msg?: string, ...args: any[]): void;
-    // Allow a passed in Logger that has other properties, as a Pino logger
+    // Allow a passed in logger that has other properties, as a Pino logger
 
     [propName: string]: any;
   }
 
-  // Link and `links` are intended to be compatible with OTel's
-  // span link attributes are not supported.
+
   export interface Link {
-    /** A W3C trace-context 'traceparent' string, Transaction, Span, or OTel SpanContext. */
+    /** A W3C trace-context 'traceparent' string, Transaction, Span, and or OTel SpanContext. */
     context: Transaction | Span | { traceId: string; spanId: string } | string;
   }
 
   export interface TransactionOptions {
     startTime?: number;
-    // `childOf` is a W3C trace-context 'traceparent' string. Passing a
-    // Transaction or Span is deprecated.
+   
     childOf?: Transaction | Span | string;
     tracestate?: string; // A W3C trace-context 'tracestate' string.
     links?: Link[];

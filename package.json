@@ -1,6 +1,6 @@
 {
   "name": "@mukhy/mtn-apm-agent",
-  "version": "1.0.3",
+  "version": "1.0.8",
   "description": "The official MTN APM agent for Node.js",
   "type": "commonjs",
   "main": "index.js",
