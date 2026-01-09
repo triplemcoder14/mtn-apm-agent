@@ -216,7 +216,7 @@ Agent.prototype.start = function (opts) {
 
   this.logger.info('MTN Observability Agent v%s', version);
 
-  if (!this._conf.serverUrl || !this._conf.serviceName) {
+  if (!this._conf.endpoint || !this._conf.serviceName) {
     this.logger.error('MTN APM misconfiguration detected, agent disabled');
     this._conf.active = false;
     return this;

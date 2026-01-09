@@ -13,14 +13,14 @@ quickly identify root causes. MTN engineers can reach the internal SRE team for 
 ## Getting started
  
 You will need an Observability endpoint that accepts APM traffic. Obtain the
-APM **`serverUrl`** from the SRE team before starting.
+APM **`endpoint`** from the SRE team before starting.
  
 Getting started typically looks like this:
  
 1. Install the APM agent package as a dependency:
  
     ```
-    npm install --save @mukhy/mtn-apm-agent
+    npm install @mukhy/mtn-apm-agent
     ```
  
 2. Initialize the APM agent before any other imports
